@@ -15,6 +15,12 @@ y = df["price"]
 model = DecisionTreeRegressor(max_depth=2, random_state=1)
 model.fit(X, y)
 
+new_house = pd.DataFrame({"size": [1600]})
+
+prediction = model.predict(new_house)
+
+print("Predicted price:", prediction[0])
+
 plt.figure(figsize=(12, 6))
 plot_tree(
     model,
