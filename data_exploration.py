@@ -8,6 +8,15 @@ data = {
 
 df = pd.DataFrame(data)
 
+# Check missing values in each column
+print(df.isnull().sum())
+
+# Check duplicate rows
+print("Duplicate rows:", df.duplicated().sum())
+
+# Check data types
+print(df.dtypes)
+
 print(df.head())
 print("Dataset shape:", df.shape)
 print("Columns:", df.columns.tolist())
