@@ -14,7 +14,7 @@ print(df.isnull().sum())
 # Check duplicate rows
 print("Duplicate rows:", df.duplicated().sum())
 
-# Check data types
+# Check data types of data
 print(df.dtypes)
 
 print(df.head())
