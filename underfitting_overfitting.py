@@ -53,3 +53,4 @@ for depth in [1, 3, 5, 10, None]:
     print(f"Training MAE: {train_mae:.2f}")
     print(f"Validation MAE: {valid_mae:.2f}")
     print("-" * 30)
+    
