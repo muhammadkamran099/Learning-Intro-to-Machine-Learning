@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
-# 1. Create sample house data
+
 data = {
     "size": [800, 1000, 1200, 1500, 1800, 2000,
              900, 1100, 1300, 1600, 1900, 2200,
@@ -20,7 +20,6 @@ data = {
 
 df = pd.DataFrame(data)
 
-# 2. Select features and target
 X = df[["size", "bedrooms"]]
 y = df["price"]
 
@@ -29,26 +28,26 @@ X_train, X_valid, y_train, y_valid = train_test_split(
     X, y, test_size=0.3, random_state=1
 )
 
-# 4. Create the Random Forest model
+
 model = RandomForestRegressor(
     n_estimators=100,
     random_state=1
 )
 
-# 5. Train the model
+
 model.fit(X_train, y_train)
 
-# 6. Make predictions
+
 predictions = model.predict(X_valid)
 
-# 7. Evaluate the model
+
 mae = mean_absolute_error(y_valid, predictions)
 
 print("Actual prices:", y_valid.tolist())
 print("Predicted prices:", predictions.round(2).tolist())
 print("Mean Absolute Error:", round(mae, 2))
 
-# 8. Predict a new house price
+
 new_house = pd.DataFrame({
     "size": [1400],
     "bedrooms": [3]
