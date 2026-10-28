@@ -8,7 +8,6 @@ from sklearn.metrics import mean_absolute_error
 train = pd.read_csv("train.csv")
 test = pd.read_csv("test.csv")
 
-# 2. Choose features available in both datasets
 features = [
     "OverallQual",
     "GrLivArea",
