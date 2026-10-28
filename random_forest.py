@@ -23,7 +23,7 @@ df = pd.DataFrame(data)
 X = df[["size", "bedrooms"]]
 y = df["price"]
 
-# 3. Split data
+
 X_train, X_valid, y_train, y_valid = train_test_split(
     X, y, test_size=0.3, random_state=1
 )
